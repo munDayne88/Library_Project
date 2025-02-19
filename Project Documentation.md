@@ -20,4 +20,9 @@
         6. BlankCheck = This should include the name(s) of critical data columns, missing data considered an error.
 
 #write_SQL
-    This will write a dataset to a database table
+    This will write a dataset to a database table.
+    Options:
+        1. Name = Name of the table to be created
+        2. Server = This should be localhost if local, otherwise cloud specific
+        3. database = the name of the database where the table should be created
+        4. df = this is the dataframe to be writen to a table
