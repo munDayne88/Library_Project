@@ -19,7 +19,7 @@ def pd_read_csv(path,IdCol,DateCol1,DateCol2,CompareDates,BlankCheck):
         dfErrors = pd.concat([dfDurationError, dfError])
     if not CompareDates:
         dfErrors = dfError
-    return df
+    return dfError
     
 def write_SQL(name,server,database,df):
     connection_string = f'mssql+pyodbc://@{server}/{database}?trusted_connection=yes&driver=ODBC+Driver+17+for+SQL+Server'
@@ -30,4 +30,4 @@ def write_SQL(name,server,database,df):
 if __name__ == "__main__":
     filePath = 'C:/Users/Admin/Desktop/GitHub_Stuff/demo/03_Library SystemBook.csv'
     df = pd_read_csv(path=filePath, IdCol='Id', DateCol1='Book checkout',DateCol2='Book Returned',CompareDates=True,BlankCheck='Customer ID')
-    write_SQL(name='Book_Loans_New',server='localhost',database='Library_Project',df=df)
+    write_SQL(name='Book_Loans_Errors',server='localhost',database='Library_Project',df=df)

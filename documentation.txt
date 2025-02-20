@@ -1,0 +1,38 @@
+##Intro
+
+To improve the quality analysis for a library I will create a new process which will include as much automation as possible 
+in the interests of efficiency and accuracy.
+The new process will deliver, from raw data, fully formatted and usable information presented in a dashboard format.
+As part of the process, any erroneous data will be indentified for correction and trends.
+
+##Actions
+
+Using python and accompanying libraries I created an application which, with inputs from the user, 
+can process files of many different structures and subject types.
+The user inputs include the option to enrich the data for additional analysis.
+
+In order to maximise accuracy and reliability of the outputted data, all elements of the python application are tested 
+with multiple scenarios prior to deployment and following any change.
+
+As the process is likely to be used sporadically and included a number of elements required by the python application, 
+I decided to containerise the solution using Docker.
+This allows all requirements for the process to be delivered to the user and only when required, 
+this means that the container and application will only exist during use.
+This vastly improves the ease of use and the efficiency of resource usage.
+
+Data is stored in an SQL server, this allows data to persist and can be added to etc in order to create a history of data.
+This data can also be used for further analysis or additional insights as required.
+
+In order to demonstrate the process and collected information, a power BI dashboard has been created. 
+Here the user can see key metrics such as amount of data collected, amount of erronous data and more.
+The user can also review the correctly formatted data within the dashboard for additional information.
+
+Progress was tracked throughout using a card based task system, this ensured that tasks aligned correctly to the requirements 
+and enabled oversight into the build process.
+
+##Conclusion
+
+The new process has taken a very manual and labourious task (one which is prone to errors) and has fully automated it.
+The data is now more accurate, users have the information available to correct any issues and insight into trends and other metrics.
+The data is stored in a secure and reliable way.
+Resource is only used when required, maximising efficiency.
